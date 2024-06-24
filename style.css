@@ -21,6 +21,7 @@ html {
 :root {
   --color-background: #ffffff;
   --color-text: #000000;
+  --color-yellow: #FFA501
 }
 
 body {
@@ -49,8 +50,9 @@ button {
 }
 
 .container {
-  width: 1140px;
+  max-width: 1180px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 
@@ -60,20 +62,22 @@ button {
   height: 800px;
   position: relative;
   background-image: url("./assets/images/main-background.png");
-  background-position: center;
+  background-position: center -108px;
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 206px;
 }
 
 .main__article {
-  width: 532px;
+  max-width: 532px;
 }
 
 .main__article-text {
   font-size: 16px;
   position: relative;
   z-index: 1;
+  padding-left: 10px;
+  letter-spacing: 0.7px;
 }
 
 .main__article-text::before {
@@ -81,7 +85,7 @@ button {
   position: absolute;
   width: 36px;
   height: 36px;
-  background: #FFA501;
+  background: var(--color-yellow);
   border-radius: 50px;
   z-index: -1;
   margin-left: -10px;
@@ -92,7 +96,9 @@ button {
   font-size: 48px;
   line-height: 60px;
   margin-top: 9px;
-  margin-bottom: 25px;
+  margin-bottom: 34px;
+  max-width: 532px;
+  letter-spacing: 1.2px;
 }
 
 .main__buttons {
@@ -105,13 +111,17 @@ button {
 .main__button-about-me {
   width: 135px;
   height: 45px;
-  background-color: #FFA501;
+  background-color: var(--color-yellow);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.main__button-portfolio {
+  filter:drop-shadow(0px 4px 4px #00000026);
 }
 
 .main__button-about-me {
@@ -123,7 +133,7 @@ button {
 }
 
 .main__button-about-me:hover {
-  border: 2px solid #FFA501;
+  border: 2px solid var(--color-yellow);
 }
 
 .main__social-media {
@@ -133,12 +143,13 @@ button {
   justify-content: space-between;
   transform: rotate(-90deg);
   position: absolute;
-  left: -110px;
+  left: -106px;
   top: 384px;
 }
 
 .main__social-media-title {
   font-size: 16px;
+  letter-spacing: 0.9px;
 }
 
 .main__social-media-line {
@@ -156,7 +167,7 @@ button {
 .main__menu-button {
   position: absolute;
   width: 36px;
-  height: 19px;
+  height: 20px;
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -179,4 +190,228 @@ button {
 
 .main__menu-button-item2 {
   width: 36px;
+}
+
+
+/*experience section*/
+
+.experience {
+  margin: 60px 0;
+}
+
+.experience__header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience__header-text {
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.7px;
+}
+
+.experience__header-text::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background: var(--color-yellow);
+  border-radius: 50px;
+  z-index: -1;
+  left: 6px;
+  top: -6px;
+}
+
+.experience__header-title {
+  font-size: 36px;
+  margin-top: 6px;
+  margin-bottom: 25px;
+}
+
+.experience__header-line {
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-yellow);
+  margin-bottom: 60px;
+}
+
+.experience__sections {
+  display: flex;
+  justify-content: space-around;
+}
+
+.experience__section {
+  width: 424px;
+  border-left: 1px solid #000000;
+  padding-left: 43px;
+  position: relative;
+}
+
+.experience__section-title {
+  font-size: 20px;
+  margin-bottom: 40px;
+  margin-top: -6px;
+}
+
+.experience__section-title::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: var(--color-yellow);
+  border-radius: 50px;
+  top: 0;
+  left: -8px;
+}
+
+.experience__section-block1 {
+  margin-bottom: 45px;
+}
+
+.experience__section-block-header {
+  display: flex;
+}
+
+.experience__section-block-header-icon_education1,
+.experience__section-block-header-icon_education2,
+.experience__section-block-header-icon_job1,
+.experience__section-block-header-icon_job2 {
+  width: 36px;
+  height: 36px;
+  border-radius: 50px;
+  background-color: var(--color-yellow);
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.experience__section-block-header-icon_education1::before,
+.experience__section-block-header-icon_education2::before,
+.experience__section-block-header-icon_job1::before,
+.experience__section-block-header-icon_job2::before {
+  content: "";
+  position: absolute;
+  width: 44px;
+  height: 1px;
+  background-color: #000000;
+  left: -44px;
+  top: 18px;
+  z-index: -1;
+}
+
+.experience__section-block-header-icon_education1::after,
+.experience__section-block-header-icon_education2::after,
+.experience__section-block-header-icon_job1::after,
+.experience__section-block-header-icon_job2::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url("./assets/icons/education1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: -6px;
+  bottom: -2px;
+}
+
+.experience__section-block-header-icon_education2::after {
+  background-image: url("./assets/icons/education2.svg");
+}
+
+.experience__section-block-header-icon_job1::after {
+  background-image: url("./assets/icons/job1.svg");
+}
+
+.experience__section-block-header-icon_job2::after {
+  background-image: url("./assets/icons/job2.svg");
+}
+
+.experience__section-block-header-titles {
+  margin-left: 20px;
+  margin-bottom: 12px;
+}
+
+.experience__section-block-header-subtitle,
+.experience__section-block-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*tablet, mobile*/
+
+@media screen and (max-width: 1460px) {
+  .main {
+    height: 640px;
+    background-position: center;
+  }
+  
+  .main__social-media {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main__social-media {
+    display: none;
+  }
+
+  .experience__sections {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience__section:first-child {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .main__article-title {
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 32px;
+    max-width: 280px;
+  }
+
+  .experience__header-title {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .experience__section {
+    width: 292px;
+  }
 }
