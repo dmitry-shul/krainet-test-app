@@ -56,6 +56,111 @@ button {
 }
 
 
+/*background blur*/
+
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(255, 255, 255, 0.75);
+  z-index: 9;
+  display: none;
+}
+
+
+/*burger menu*/
+
+.burger-menu {
+  position: absolute;
+  z-index: 10;
+  width: 345px;
+  height: 800px;
+  background-color: var(--color-yellow);
+  top: 0;
+  left: -350px;
+  padding: 140px 40px 0 40px;
+  transition: 0.4s;
+}
+
+.burger-menu_active {
+  left: 0;
+}
+
+.burger-menu__close-btn {
+  width: 29px;
+  height: 29px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.burger-menu__close-btn:hover {
+  transform: scale(1.04);
+}
+
+.burger-menu__close-btn::before {
+  content: "";
+  position: absolute;
+  width: 39px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #000000;
+  transform: rotate(45deg);
+  left: -5px;
+}
+
+.burger-menu__close-btn::after {
+  content: "";
+  position: absolute;
+  width: 39px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #000000;
+  transform: rotate(-45deg);
+  left: -5px;
+}
+
+.burger-menu__navigation-item {
+  margin-bottom: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger-menu__navigation-item:hover a {
+  color: rgb(65, 65, 65);
+}
+
+.burger-menu__navigation-item::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  bottom: 10px;
+  left: 0;
+}
+
+.burger-menu__navigation-item a {
+  color: #ffffff;
+  font-size: 24px;
+  padding-left: 35px;
+}
+
+.burger-menu__social-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+}
+
+
 /*main section*/
 
 .main {
@@ -158,7 +263,8 @@ button {
   background-color: #000
 }
 
-.main__social-media-icons {
+.main__social-media-icons,
+.burger-menu__social-media-icons {
   width: 90px;
   display: flex;
   justify-content: space-between;
@@ -167,7 +273,7 @@ button {
 .main__menu-button {
   position: absolute;
   width: 36px;
-  height: 20px;
+  height: 19px;
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -186,6 +292,7 @@ button {
   width: 30px;
   height: 3px;
   background: #000;
+  display: flex;
 }
 
 .main__menu-button-item2 {
