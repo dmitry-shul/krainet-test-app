@@ -177,7 +177,8 @@ button {
   max-width: 532px;
 }
 
-.main__article-text {
+.main__article-text,
+.contacts__subtitle {
   font-size: 16px;
   position: relative;
   z-index: 1;
@@ -185,7 +186,8 @@ button {
   letter-spacing: 0.7px;
 }
 
-.main__article-text::before {
+.main__article-text::before,
+.contacts__subtitle::before {
   content: "";
   position: absolute;
   width: 36px;
@@ -213,9 +215,11 @@ button {
 }
 
 .main__button-portfolio,
-.main__button-about-me {
-  width: 135px;
-  height: 45px;
+.main__button-about-me,
+.contacts__form-button {
+  /*width: 135px;*/
+  /*height: 45px;*/
+  padding: 12px 26px;
   background-color: var(--color-yellow);
   display: flex;
   align-items: center;
@@ -225,15 +229,18 @@ button {
   cursor: pointer;
 }
 
-.main__button-portfolio {
+.main__button-portfolio,
+.contacts__form-button {
   filter:drop-shadow(0px 4px 4px #00000026);
 }
 
 .main__button-about-me {
+  border: 2px solid transparent;
   background-color: transparent;
 }
 
-.main__button-portfolio:hover {
+.main__button-portfolio:hover,
+.contacts__form-button:hover {
   background-color: #f09c00;
 }
 
@@ -303,7 +310,7 @@ button {
 /*experience section*/
 
 .experience {
-  margin: 60px 0;
+  margin: 110px 0 0 0;
 }
 
 .experience__header {
@@ -311,6 +318,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 68px;
 }
 
 .experience__header-text {
@@ -332,17 +340,18 @@ button {
   top: -6px;
 }
 
-.experience__header-title {
+.experience__header-title,
+.contacts__title {
   font-size: 36px;
-  margin-top: 6px;
+  margin-top: 9px;
   margin-bottom: 25px;
+  letter-spacing: 1.2px;
 }
 
 .experience__header-line {
   width: 60px;
   height: 3px;
   background-color: var(--color-yellow);
-  margin-bottom: 60px;
 }
 
 .experience__sections {
@@ -351,10 +360,14 @@ button {
 }
 
 .experience__section {
-  width: 424px;
+  width: 422px;
   border-left: 1px solid #000000;
   padding-left: 43px;
   position: relative;
+}
+
+.experience__section:nth-child(2) {
+  margin-right: 16px;
 }
 
 .experience__section-title {
@@ -375,7 +388,7 @@ button {
 }
 
 .experience__section-block1 {
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 
 .experience__section-block-header {
@@ -440,6 +453,8 @@ button {
 .experience__section-block-header-titles {
   margin-left: 20px;
   margin-bottom: 12px;
+  letter-spacing: 0.px;
+  font-size: 14px;
 }
 
 .experience__section-block-header-subtitle,
@@ -449,8 +464,109 @@ button {
 }
 
 
+/*contacts section*/
 
+.contacts {
+  width: 100%;
+  margin: 100px 0 100px 0;
+}
 
+.contacts__section {
+  display: flex;
+  padding: 0 30px;
+}
+
+.contacts__image {
+  width: 400px;
+  height: 600px;
+  margin-left: 20px;
+}
+
+.contacts__block {
+  margin-left: 72px;
+  width: 100%;
+  padding-top: 6px;
+}
+
+.contacts__title {
+  margin-bottom: 4px;
+}
+
+.contacts__line {
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-yellow);
+  margin-bottom: 18px;
+}
+
+.contacts__social-media-title,
+.contacts__form-title {
+  font-size: 14px;
+}
+
+.contacts__social-media-icons {
+  width: 136px;
+  display: flex;
+  justify-content: space-between;
+  margin: 22px 0 12px 0;
+}
+
+.contacts__social-media-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.contacts__form {
+  max-width: 586px;
+}
+
+.contacts__form-inputs {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__form-input {
+  position: relative;
+  width: 280px;
+  height: 45px;
+  padding: 14px 20px;
+  border: 1px solid #000000;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.contacts__form-message {
+  position: relative;
+  width: 585px;
+  height: 190px;
+  padding: 14px 20px;
+  border: 1px solid #000000;
+  resize: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.contacts__form-label {
+  position: absolute;
+  z-index: 4;
+  padding: 2px 9px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #ffffff;
+  margin-left: 12px;
+  margin-top: -10px;
+}
+
+.contacts__form-button {
+  margin-top: 24px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contacts__form-error {
+  max-width: 280px;
+}
 
 
 
@@ -482,6 +598,10 @@ button {
   
   .main__social-media {
     display: none;
+  }
+
+  .burger-menu {
+    height: 640px;
   }
 }
 
@@ -520,5 +640,10 @@ button {
   
   .experience__section {
     width: 292px;
+  }
+
+  .burger-menu {
+    width: 250px;
+    padding: 140px 18px 0 20px;
   }
 }
