@@ -151,7 +151,7 @@
           <form action="" class="contacts__form">
             <h5 class="contacts__form-title">Или оставьте ваши данные и я сама вам напишу:</h5>
             <div class="contacts__form-inputs">
-              <div>
+              <div style="display: flex; flex-grow: 1;">
                 <label 
                   for="contacts__form-input-name" 
                   class="contacts__form-label"
@@ -163,7 +163,8 @@
                 >
                 <p class="contacts__form-input-name-error contacts__form-error"></p>
               </div>
-              <div>
+
+              <div style="display: flex; flex-grow: 1;">
                 <label 
                   for="contacts__form-input-email" 
                   class="contacts__form-label"
@@ -176,6 +177,7 @@
                 <p class="contacts__form-input-email-error contacts__form-error"></p>
               </div>
             </div>
+
             <label 
               for="contacts__form-message" 
               class="contacts__form-label"
@@ -186,7 +188,13 @@
               class="contacts__form-message"
             ></textarea>
             <p class="contacts__form-message-error contacts__form-error"></p>
-            <button class="contacts__form-button">Отправить сообщение</button>
+            <div class="contacts__submit-checkbox-button">
+              <div class="contacts__form-checkbox">
+                <input type="checkbox" id="allow-submit" name="allow-submit" />
+                <label for="allow-submit">Scales</label>
+              </div>
+              <button class="contacts__form-button">Отправить сообщение</button>
+            </div>
           </form>
         </article>
       </div>
