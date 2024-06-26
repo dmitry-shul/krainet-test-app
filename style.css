@@ -301,6 +301,11 @@ button {
   justify-content: space-between;
 }
 
+.main__social-media-icons a {
+  display: flex;
+  align-items: center;
+}
+
 .main__menu-button {
   position: absolute;
   width: 36px;

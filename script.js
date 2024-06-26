@@ -61,6 +61,7 @@ const sendFormToServer = async () => {
     inputName.value = ""
     inputEmail.value = ""
     textAreaMessage.value = ""
+    checkboxAllowSubmit.checked = false
   }
 }
 
@@ -133,7 +134,9 @@ const validationForm = () => {
 }
 
 const checkboxChecked = () => {
-  checkboxAllowBlock.style = checkboxAllowSubmit.checked ? "" : "color: #ff1111;"
+  if(window.innerWidth <= 1000) {
+    checkboxAllowBlock.style = checkboxAllowSubmit.checked ? "" : "color: #ff1111;"
+  }
   return window.innerWidth >= 1000 ? true : checkboxAllowSubmit.checked
 }
 
