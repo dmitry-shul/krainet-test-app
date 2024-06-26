@@ -53,6 +53,7 @@ const sendFormToServer = async () => {
         message: textAreaMessage.value,
       })
     })
+    .then((response) => response.json())
   } catch (error) {
     console.log(error.message)
   } finally {
