@@ -76,7 +76,7 @@ const loaderSubmitButton = () => {
 
 //validation
 const validationName = (name) => {
-  const regEx = /^[A-Za-z]{2,30}$/;
+  const regEx = /^[A-Za-zА-Яа-яЁё]{2,30}$/;
   const splitName = name.split(" ");
   const result = splitName.every((item) => regEx.test(item))
   if(!result) {
