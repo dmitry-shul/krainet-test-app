@@ -25,9 +25,9 @@
     </nav>
     <div class="burger-menu__social-media">
       <div class="burger-menu__social-media-icons">
-        <a href="https://github.com/"><img src="./assets/icons/github.svg" alt="github"></a>
-        <a href="https://www.instagram.com/"><img src="./assets/icons/instagram.svg" alt="instagram"></a>
-        <a href="https://www.facebook.com/"><img src="./assets/icons/facebook.svg" alt="facebook"></a>
+        <a href="https://github.com/" target="_blank"><img src="./assets/icons/github.svg" alt="github"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="./assets/icons/instagram.svg" alt="instagram"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="./assets/icons/facebook.svg" alt="facebook"></a>
       </div>
     </div>
   </div>
@@ -48,9 +48,9 @@
       <h5 class="main__social-media-title">Социальные сети</h5>
       <div class="main__social-media-line"></div>
       <div class="main__social-media-icons">
-        <a href="https://github.com/"><img src="./assets/icons/github.svg" alt="github"></a>
-        <a href="https://www.instagram.com/"><img src="./assets/icons/instagram.svg" alt="instagram"></a>
-        <a href="https://www.facebook.com/"><img src="./assets/icons/facebook.svg" alt="facebook"></a>
+        <a href="https://github.com/" target="_blank"><img src="./assets/icons/github.svg" alt="github"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="./assets/icons/instagram.svg" alt="instagram"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="./assets/icons/facebook.svg" alt="facebook"></a>
       </div>
     </aside>
 
@@ -142,16 +142,16 @@
   
           <div class="contacts__social-media">
             <div class="contacts__social-media-icons">
-              <a href="https://www.facebook.com/"><img src="./assets/icons/facebook.svg" alt="facebook"></a>
-              <a href="https://telegram.org/"><img src="./assets/icons/telegram.svg" alt="telegram"></a>
-              <a href="https://www.instagram.com/"><img src="./assets/icons/instagram.svg" alt="instagram"></a>
+              <a href="https://www.facebook.com/" target="_blank"><img src="./assets/icons/facebook.svg" alt="facebook"></a>
+              <a href="https://telegram.org/" target="_blank"><img src="./assets/icons/telegram.svg" alt="telegram"></a>
+              <a href="https://www.instagram.com/" target="_blank"><img src="./assets/icons/instagram.svg" alt="instagram"></a>
             </div>
           </div>
   
-          <form action="" class="contacts__form">
+          <form class="contacts__form" novalidate>
             <h5 class="contacts__form-title">Или оставьте ваши данные и я сама вам напишу:</h5>
             <div class="contacts__form-inputs">
-              <div style="display: flex; flex-grow: 1;">
+              <div class="contacts__form-input-block">
                 <label 
                   for="contacts__form-input-name" 
                   class="contacts__form-label"
@@ -161,10 +161,10 @@
                   class="contacts__form-input" 
                   id="contacts__form-input-name"
                 >
-                <p class="contacts__form-input-name-error contacts__form-error"></p>
+                <div class="contacts__form-input-name-error contacts__form-error"></div>
               </div>
 
-              <div style="display: flex; flex-grow: 1;">
+              <div class="contacts__form-input-block">
                 <label 
                   for="contacts__form-input-email" 
                   class="contacts__form-label"
@@ -186,6 +186,7 @@
               name="message" 
               id="contacts__form-message" 
               class="contacts__form-message"
+              maxlength="760"
             ></textarea>
             <p class="contacts__form-message-error contacts__form-error"></p>
             <div class="contacts__submit-checkbox-button">
@@ -200,12 +201,6 @@
       </div>
     </div>
   </section>
-
-
-
-
-
-
 
 
   <script src="script.js"></script>
