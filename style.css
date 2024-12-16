@@ -43,6 +43,7 @@ a {
 input,
 textarea {
   outline: none;
+  touch-action: manipulation;
 }
 
 button {
