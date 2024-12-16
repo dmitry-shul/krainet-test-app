@@ -9,7 +9,6 @@ html {
   font-weight: 700;
   color: var(--color-text);
   scroll-behavior: smooth;
-  touch-action: manipulation;
 }
 
 *,
@@ -28,7 +27,6 @@ html {
 body {
   margin: 0 auto;
   background: var(--color-background);
-  touch-action: manipulation;
 }
 
 ul {
@@ -572,7 +570,7 @@ button {
   height: 45px;
   padding: 14px 20px;
   border: 1px solid #000000;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 500;
 }
 
