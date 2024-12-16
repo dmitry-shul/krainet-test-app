@@ -9,6 +9,7 @@ html {
   font-weight: 700;
   color: var(--color-text);
   scroll-behavior: smooth;
+  touch-action: manipulation;
 }
 
 *,
@@ -27,6 +28,7 @@ html {
 body {
   margin: 0 auto;
   background: var(--color-background);
+  touch-action: manipulation;
 }
 
 ul {
